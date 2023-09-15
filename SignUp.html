@@ -1,0 +1,100 @@
+<html>
+
+<head>
+    <title>
+        Sign Up
+    </title>
+    <link rel="stylesheet" href="ALEX.css">
+    <style>
+        
+    </style>
+
+    <script>
+        function password() {
+            x = document.getElementById("pass")
+            y = document.getElementById("pass2")
+            if (x.value == "") {
+                alert("enter password")
+                x.focus();
+                x.select();
+                return false
+            }
+            else if (x.value != y.value) {
+                alert("wrong confirm pass")
+                y.focus();
+                y.select();
+                return false
+            }
+            else {
+                return true
+            }
+        }
+
+    </script>
+</head>
+
+<body class="cont">
+    <div class="header">
+        <div class="container">
+            <img class="logo" src="logo.jpg" height="50px" width="80px" />
+
+            <span style="font-size: 25px;font-weight: 700;font-style: italic ;border: 0em;margin: 0em;padding: 0em ;">
+                ALEX.SCI</span>
+
+            &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;
+
+            <ul class="list">
+                <li><a href="index.html">HOME</a></li>
+                <li><a href="SignIn.html">SIGN IN</a></li>
+                <li><a href="signup.html">SIGN UP</a></li>
+
+
+            </ul>
+
+            <div class="links">
+                <span class="icon">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </span>
+
+                <ul>
+                    <li><a href="#all">Departments</a></li>
+                    <li><a href="#d2">CONTACT US</a></li>
+                    <li><a href="#d2">ABOUT US</a></li>
+
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!--form-->
+
+    <div class="login" style="float: none;">
+        <form action="data.php" method="post" style="padding: 5px;float: left;padding-left: 60%;">
+            <label style="font-size: 70px; color: #808000;"> Sign Up Now ! </label> <br>
+            <label style="font-size: 25px; font-style: oblique; color:#808000 ;"> For Free </label> <br><br>
+            <label style="color: whitesmoke; font-size: 30px;"> <b>Name </b></label>
+            <input type="text" id="n1" name="NAME" placeholder="Enter Your Name" required> <br><br>
+            <label style="color: whitesmoke ; font-size: 30px;"><b>Phone</b> </label>
+            <input type="tel" id="a1" name="PHONE" placeholder="Enter Your Phone No" required> <br><br>
+            <label style="color: whitesmoke; font-size: 30px;"> <b>Email </b></label>
+            <input type="email" id="w1" name="Email" placeholder="Enter Your Email" > <br><br>
+            <label style="color: whitesmoke; font-size: 30px;"><b> Password </b></label>
+            <input type="password" id="pass" name="PASSWORD" placeholder="Enter Strong Password" required> <br><br>
+            <label style="color: whitesmoke; font-size: 30px;"> <b>Confirm Password </b></label>
+            <input type="password" id="pass2" name="rePASSWORD" onchange="password()" placeholder="Confirm The Password"
+                required> <br><br>
+            <input type="submit" id="sub" name="Reg" value="Let's Go"
+                style="border-radius: 15px ;background-color: whitesmoke;">
+
+                <a href="SignIn.html" > Already have an account? Sign In</a>
+
+        </form>
+    </div>
+</body>
+
+
+
+
+
+</html>
